@@ -23,8 +23,7 @@ app.post('/insertBook',Book.uploadImageFile,async(req,res)=>{
     var imagePath = "";
 
     if(req.file){
-        imagePath = Book.imgPath+'/'+req.
-        file.filename;
+        imagePath = Book.imgPath+'/'+req.file.filename;
     }
     req.body.coverImage = imagePath;
 
